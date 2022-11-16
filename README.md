@@ -10,3 +10,9 @@ In `test/test.ts` there is a minimal reproduction file which illustrates the iss
 
 If you switch the `>>` operator in `main.nr` to `<<` the test using `acir_from_bytes` will pass.
 The right shift operator does not serialise correctly when being converted into the acir format.
+
+### To reproduce
+
+1. `npm` install
+2. A pre-compiled `test.acir` has been included in the `circuits/build` folder. If this file does not exist for you or to compile again just run `make comp`.
+3. Run `npx hardhat test`
